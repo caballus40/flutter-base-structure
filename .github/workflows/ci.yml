@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      L10N_SHEET_ID: ${{ secrets.L10N_SHEET_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.32.8
+          channel: stable
+          cache: true
+
+      - name: Install dependencies (also generates l10n)
+        run: flutter pub get
+
+      - name: Format
+        # Tracked files only, so generated code is never checked.
+        run: dart format --output=none --set-exit-if-changed $(git ls-files '*.dart')
+
+      - name: Analyze
+        run: flutter analyze
+
+      - name: Test
+        run: flutter test
+
+      - name: Translations match the Google Sheet
+        if: env.L10N_SHEET_ID != ''
+        run: |
+          dart run tool/sync_l10n.dart
+          git diff --exit-code -- 'lib/l10n/*.arb' || {
+            echo "::error::ARB files are out of date. Run: dart run tool/sync_l10n.dart --sheet <ID>"
+            exit 1
+          }

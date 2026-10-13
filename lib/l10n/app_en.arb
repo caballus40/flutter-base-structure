@@ -1,0 +1,21 @@
+{
+  "@@locale": "en",
+  "appTitle": "App",
+  "@appTitle": {
+    "description": "App name shown by the OS task switcher"
+  },
+  "signIn": "Sign in",
+  "signOut": "Sign out",
+  "email": "Email",
+  "password": "Password",
+  "emailInvalid": "Enter a valid email",
+  "passwordRequired": "Enter your password",
+  "items": "Items",
+  "itemsEmpty": "No items yet",
+  "retry": "Retry",
+  "errorNetwork": "No connection. Check your network.",
+  "errorUnauthorized": "Please sign in again.",
+  "errorBadRequest": "Request could not be completed.",
+  "errorServer": "Server error. Try again later.",
+  "errorUnknown": "Something went wrong."
+}

@@ -1,0 +1,18 @@
+{
+  "@@locale": "id",
+  "appTitle": "Aplikasi",
+  "signIn": "Masuk",
+  "signOut": "Keluar",
+  "email": "Email",
+  "password": "Kata sandi",
+  "emailInvalid": "Masukkan email yang valid",
+  "passwordRequired": "Masukkan kata sandi Anda",
+  "items": "Daftar Item",
+  "itemsEmpty": "Belum ada item",
+  "retry": "Coba lagi",
+  "errorNetwork": "Tidak ada koneksi. Periksa jaringan Anda.",
+  "errorUnauthorized": "Silakan masuk kembali.",
+  "errorBadRequest": "Permintaan tidak dapat diproses.",
+  "errorServer": "Terjadi kesalahan server. Coba lagi nanti.",
+  "errorUnknown": "Terjadi kesalahan."
+}

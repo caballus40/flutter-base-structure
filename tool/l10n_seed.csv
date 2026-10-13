@@ -1,0 +1,16 @@
+key,en,id,description
+appTitle,App,Aplikasi,App name shown by the OS task switcher
+signIn,Sign in,Masuk,
+signOut,Sign out,Keluar,
+email,Email,Email,
+password,Password,Kata sandi,
+emailInvalid,Enter a valid email,Masukkan email yang valid,
+passwordRequired,Enter your password,Masukkan kata sandi Anda,
+items,Items,Daftar Item,
+itemsEmpty,No items yet,Belum ada item,
+retry,Retry,Coba lagi,
+errorNetwork,No connection. Check your network.,Tidak ada koneksi. Periksa jaringan Anda.,
+errorUnauthorized,Please sign in again.,Silakan masuk kembali.,
+errorBadRequest,Request could not be completed.,Permintaan tidak dapat diproses.,
+errorServer,Server error. Try again later.,Terjadi kesalahan server. Coba lagi nanti.,
+errorUnknown,Something went wrong.,Terjadi kesalahan.,

@@ -1,0 +1,4 @@
+{
+  "APP_ENV": "stg",
+  "BASE_URL": "https://stg.api.example.com"
+}
